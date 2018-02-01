@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="order_by_label">
+        <item>@string/order_by_newest_label</item>
+        <item>@string/order_by_oldest_label</item>
+    </string-array>
+    <string-array name="order_by_values">
+        <item>@string/order_by_newest_value</item>
+        <item>@string/order_by_oldest_value</item>
+    </string-array>
+
+    <string-array name="page_size_label">
+        <item>@string/page_size_10_label</item>
+        <item>@string/page_size_20_label</item>
+        <item>@string/page_size_30_label</item>
+    </string-array>
+    <string-array name="page_size_values">
+        <item>@string/page_size_10_value</item>
+        <item>@string/page_size_20_value</item>
+        <item>@string/page_size_30_value</item>
+    </string-array>
+</resources>
