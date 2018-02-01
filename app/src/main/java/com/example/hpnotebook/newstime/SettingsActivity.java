@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.DatePicker;
@@ -55,19 +54,15 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void bindPreferenceSummaryToValue(Preference preference) {
-            preference.setOnPreferenceChangeListener(this);
             if(preference.getKey().equals("date")){
                 Log.v(LOG_TAG,"inide if");
                 SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString(getString(R.string.settings_date_key), dob);
-                //Log.v("my_tag", "date is: "+dob);
-                //Log.v(LOG_TAG, dob);
-                editor.commit();
+                Log.v("my_tag", "date is: "+dob);
+                editor.apply();
             }
-            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
-            String preferenceString = preferences.getString(preference.getKey(), "");
-            onPreferenceChange(preference, preferenceString);
+            preference.setOnPreferenceChangeListener(this);
         }
 
         @Override

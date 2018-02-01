@@ -83,7 +83,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
                 getString(R.string.settings_date_key),
                 getString(R.string.settings_date_default)
         );
-        Log.v("my_tag", "date inside newsActivity is: "+date);
+        //og.v("my_tag", "date insideonCreateLoader is: "+date);
         Uri baseUri = Uri.parse(REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
